@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BinaryConversion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            interval:
+            Console.WriteLine("Input the decimal number you want to convert: ");
+            bool success = int.TryParse(Console.ReadLine(), out int response);
+            
+            Console.WriteLine($"{response} converted to binary is {Conversion(response)}");
+           
+            goto interval;
+        }
+
+        static string Conversion(int decNumber)
+        {
+            int modulus;
+            string number = " ";
+
+            while (decNumber > 0)
+            {                
+                modulus = decNumber % 2;
+                number = modulus + number;
+                decNumber /= 2;
+            }
+            return number;
+        }
+    }
+}
