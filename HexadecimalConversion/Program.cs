@@ -22,10 +22,12 @@ namespace HexadecimalConversion
         static int Conversion(string hexNumber)
         {
             int i = 0, decNumber = 0;
-            int length = hexNumber.Length;
-            while (i > length)
+            int value = 0;
+            int length = hexNumber.Length - 1;
+            while (i >= 0)
             {
-                decNumber = 16^length + decNumber;
+
+                decNumber = (16^length + value )+ decNumber;
                 length--;
             }
             return decNumber;
