@@ -8,25 +8,28 @@ namespace BinaryConversion
         {
         interval:
             Console.WriteLine("Input the base of the number you want to convert");
-            bool success = int.TryParse(Console.ReadLine(), out int baseNumber);
+            bool success1 = int.TryParse(Console.ReadLine(), out int baseNumber1);
+            Console.WriteLine("Input the base you want to convert to");
+            bool success2 = int.TryParse(Console.ReadLine(), out int baseNumber2);
             Console.WriteLine("Input the number you want to convert: ");
-           // bool success = int.TryParse(Console.ReadLine(), out int response);
+            // bool success = int.TryParse(Console.ReadLine(), out int response);
             string response = Console.ReadLine();
             //Console.WriteLine($"{response} converted to binary is {ConversionToBinary(response)}");
-           // string hi = ConversionToBinary(response);
+            // string hi = ConversionToBinary(response);
             Console.WriteLine($"{response} converted to decimal is {ConversionToDecimal(response, baseNumber)}");
 
             goto interval;
         }
 
-        static string ConversionToBinary(int decNumber)
+        static string ConversionToBase(int decNumber, int baseValue)
         {
-           string number = " ";
+            
+            string number = " ";
 
             while (decNumber > 0)
-            {                
-               number = decNumber % 2 + number;
-               decNumber /= 2;
+            {
+                number = decNumber % baseValue + number;
+                decNumber /= baseValue;
             }
             return number;
         }
@@ -38,10 +41,10 @@ namespace BinaryConversion
             double value = 0;
             char[] binNum = binNumber.ToCharArray();
             double length = binNum.Length - 1;
-            while (length >= 0 && i < binNum.Length )
+            while (length >= 0 && i < binNum.Length)
             {
                 value = int.Parse((binNum[i].ToString()));
-                decimalNumber = (Math.Pow(baseValue,length) * value) + decimalNumber;
+                decimalNumber = (Math.Pow(baseValue, length) * value) + decimalNumber;
                 i++;
                 length--;
             }
@@ -105,6 +108,6 @@ namespace BinaryConversion
             }
             */
 
-        
+
     }
 }
