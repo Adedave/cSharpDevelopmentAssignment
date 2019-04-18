@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F589F99-E857-4C29-A69E-E6309CCFCF1B}</ProjectGuid>
+    <ProjectGuid>{9ECFA982-8A57-4B09-959E-96EB5BBA93FC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BinaryConversion</RootNamespace>
-    <AssemblyName>BinaryConversion</AssemblyName>
+    <RootNamespace>BaseCoversionTwo</RootNamespace>
+    <AssemblyName>BaseCoversionTwo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ConsoleApp1.csproj">
-      <Project>{6f81ebdb-0a8c-450d-b746-acf7d2428b5f}</Project>
-      <Name>ConsoleApp1</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
