@@ -24,6 +24,7 @@ namespace BaseConversionTwo
             string responseCheck = Console.ReadLine();
             if (ValidityCheck(responseCheck, baseNumber1) == false)
             {
+                Console.WriteLine("Please enter a valid number: ");
                 goto check;
             }
             string response = responseCheck;
@@ -51,8 +52,6 @@ namespace BaseConversionTwo
                 value = allNumbers.IndexOf(val.Substring(i, 1));
                 if (value >= baseValue)
                 {
-                    Console.WriteLine("Please enter a valid number: ");
-                    //response = Console.ReadLine();
                     determinant++;
                     break;
                 }
@@ -65,46 +64,6 @@ namespace BaseConversionTwo
             {
                 right =  false;
             }
-            //char[] responseChar = response.ToUpper().ToCharArray();
-            //foreach (char ch in responseChar)
-            //{
-            //    if ((ch == 'A' || ch == 'B' || ch == 'C' || ch == 'D' || ch == 'E' || ch == 'F') && baseNumber1 < 11)
-            //    {
-            //        Console.WriteLine("Please provide a valid number!");
-            //        ValidityCheck();
-            //        break;
-            //    }
-            //    else if ((ch == 'B' || ch == 'C' || ch == 'D' || ch == 'E' || ch == 'F') && baseNumber1 < 12)
-            //    {
-            //        Console.WriteLine("Please provide a valid number!");
-            //        ValidityCheck();
-            //        break;
-            //    }
-            //    else if ((ch == 'C' || ch == 'D' || ch == 'E' || ch == 'F') && baseNumber1 < 13)
-            //    {
-            //        Console.WriteLine("Please provide a valid number!");
-            //        ValidityCheck();
-            //        break;
-            //    }
-            //    else if ((ch == 'D' || ch == 'E' || ch == 'F') && baseNumber1 < 14)
-            //    {
-            //        Console.WriteLine("Please provide a valid number!");
-            //        ValidityCheck();
-            //        break;
-            //    }
-            //    else if ((ch == 'E' || ch == 'F') && baseNumber1 < 15)
-            //    {
-            //        Console.WriteLine("Please provide a valid number!");
-            //        ValidityCheck();
-            //        break;
-            //    }
-            //    else if ((ch == 'F') && baseNumber1 < 16)
-            //    {
-            //        Console.WriteLine("Please provide a valid number!");
-            //        ValidityCheck();
-            //        break;
-            //    }
-            //}
             return right;
         }
         
